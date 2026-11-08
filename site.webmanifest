@@ -1,0 +1,24 @@
+{
+  "name": "Sabbir Hosen Akash \u2014 Portfolio",
+  "short_name": "Sabbir",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#00ff88",
+  "orientation": "portrait",
+  "description": "Portfolio of Sabbir Hosen Akash \u2014 web development, music and writing.",
+  "icons": [
+    {
+      "src": "./android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

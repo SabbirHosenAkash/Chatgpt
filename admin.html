@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin Dashboard | Sabbir Hosen Akash</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main class="admin-shell">
+<header class="admin-header"><div><a href="/" class="back-link">← Public website</a><h1>Portfolio Admin</h1><p>Manage published content, inquiries and orders.</p></div><button id="logout-btn" class="secondary hidden">Sign out</button></header>
+<div id="setup-warning" class="notice">Admin setup is not complete. Follow <a href="SETUP_GUIDE.md">SETUP_GUIDE.md</a> and fill in <code>admin-config.js</code>.</div>
+<section id="login-panel" class="panel">
+<h2>Administrator sign in</h2>
+<form id="login-form"><label>Email<input type="email" id="email" autocomplete="username" required></label><label>Password<input type="password" id="password" autocomplete="current-password" required></label><button type="submit">Sign in securely</button></form>
+<p id="login-status" role="status"></p>
+</section>
+<section id="dashboard" class="hidden">
+<div class="toolbar"><div id="admin-user"></div><nav id="tabs"><button data-tab="projects" class="active">Projects</button><button data-tab="services">Services</button><button data-tab="products">Marketplace</button><button data-tab="posts">Blog</button><button data-tab="testimonials">Testimonials</button><button data-tab="messages">Messages</button><button data-tab="orders">Orders</button></nav></div>
+<div class="panel">
+<div class="list-head"><h2 id="section-title">Projects</h2><button id="add-btn">+ Add item</button></div>
+<div id="items-list" class="items-list"></div>
+</div>
+<div id="editor" class="panel hidden">
+<h2 id="editor-title">Add item</h2>
+<form id="item-form">
+<input type="hidden" id="item-id">
+<label>Title / Name<input id="item-title" maxlength="180" required></label>
+<label>Slug<input id="item-slug" maxlength="180"></label>
+<label>Short description<textarea id="item-summary" rows="3"></textarea></label>
+<label>Full content<textarea id="item-content" rows="5"></textarea></label>
+<div class="two-col"><label>Image URL<input id="item-image" type="url"></label><label>Website / Demo URL<input id="item-url" type="url"></label></div>
+<div class="two-col"><label>Price / Label<input id="item-price"></label><label>Status<select id="item-status"><option value="draft">Draft</option><option value="published">Published</option><option value="pending">Pending</option><option value="replied">Replied</option><option value="completed">Completed</option></select></label></div>
+<div class="editor-actions"><button type="submit">Save</button><button type="button" id="cancel-edit" class="secondary">Cancel</button></div>
+</form>
+</div>
+<p id="dashboard-status" role="status"></p>
+</section>
+</main>
+<script src="admin-config.js"></script><script src="admin.js" defer></script>
+</body></html>
